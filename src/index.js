@@ -11,6 +11,9 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
+    {/* for useSelector and useDispatch to work correctly, 
+    need to import our store and a component called <Provider> and wrap it around the whole app,
+    and pass in the Redux store behind the scenes so the hooks can access it*/}
     <Provider store={store}>
       <App />
     </Provider>
